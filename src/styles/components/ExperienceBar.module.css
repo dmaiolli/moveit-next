@@ -1,0 +1,31 @@
+.experienceBar{
+  display: flex;
+  align-items: center;
+}
+
+.experienceBar span{
+  font-size: 1rem;
+}
+
+/* Esse sinal > pega apenas as divs que estão no "nivel 1" do experience bar, e nada mais adentro */ 
+.experienceBar > div {
+  flex: 1;
+  height: 4px;
+  border-radius: 4px;
+  background-color: var(--gray-line);
+  margin: 0 1.5rem;
+  position: relative;
+}
+
+.experienceBar > div > div{
+  height: 4px;
+  border-radius: 4px;
+  background-color: var(--green);
+}
+
+span.currentExperience {
+  position: absolute;
+  top: 12px;
+  /* hackzinho para que o elemento absolute seja a "ancora" de algum outro elemento, nesse caso é para que ele fique centralizado em relação a nossa barra */
+  transform: translateX(-50%);
+}
